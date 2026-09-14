@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://cxvothc2igpaj"]
+[gd_scene load_steps=6 format=3 uid="uid://cxvothc2igpaj"]
 
 [ext_resource type="Script" uid="uid://cge5miupkxe1" path="res://sash_badge.gd" id="1_bd3m8"]
 [ext_resource type="Texture2D" uid="uid://byoqnnx54m7de" path="res://icon.svg" id="1_i8o5y"]
+[ext_resource type="Shader" uid="uid://bb8fm442iyfy0" path="res://SashBadge.gdshader" id="2_hi63b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s7raa"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6ao7q"]
+shader = ExtResource("2_hi63b")
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 motion_mode = 1
@@ -12,9 +16,9 @@ script = ExtResource("1_bd3m8")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(4.99415, 4.99415)
 shape = SubResource("RectangleShape2D_s7raa")
-disabled = true
 one_way_collision_margin = 0.0
 
 [node name="Icon" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_6ao7q")
 scale = Vector2(0.758661, 0.758661)
 texture = ExtResource("1_i8o5y")

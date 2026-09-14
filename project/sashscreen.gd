@@ -13,4 +13,5 @@ func spawnBadge():
 	add_child(badge)
 	
 	
+func _process(delta: float) -> void:
 	spawnBadge()
