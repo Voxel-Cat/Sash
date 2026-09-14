@@ -9,14 +9,5 @@ script = ExtResource("1_l7nat")
 [node name="SashBadge" parent="." instance=ExtResource("2_s7raa")]
 position = Vector2(262, 165)
 
-[node name="SashBadge" parent="SashBadge" instance=ExtResource("2_s7raa")]
-position = Vector2(-105, 113)
-
-[node name="SashBadge2" parent="SashBadge" instance=ExtResource("2_s7raa")]
-position = Vector2(123, 101)
-
-[node name="SashBadge" parent="SashBadge/SashBadge2" instance=ExtResource("2_s7raa")]
-position = Vector2(-105, 113)
-
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
